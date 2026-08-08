@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tharushi Weerasekara | Software Engineering Undergraduate</title>
+  <meta name="description" content="Personal portfolio of Tharushi Weerasekara, a Software Engineering Undergraduate. Features projects, work experience, education, skills, and certifications.">
+  <meta name="keywords" content="Tharushi Weerasekara, Software Engineer, Portfolio, Full-Stack Developer, Sri Lanka, London Metropolitan University">
+  <meta name="author" content="Tharushi Weerasekara">
+
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:title" content="Tharushi Weerasekara | Software Engineering Portfolio">
+  <meta property="og:description" content="Explore Tharushi Weerasekara's software engineering projects, skills, education, and experience.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Canvas Background for Subtle Particle Effect -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Hidden Secret Admin Mode Status Indicator -->
+  <div id="admin-status-bar" class="admin-status-bar hidden">
+    <span><i class="fa-solid fa-user-shield"></i> Secret Admin Mode Active</span>
+    <button id="open-admin-panel-btn" class="btn btn-xs btn-primary"><i class="fa-solid fa-sliders"></i> Open Admin Panel</button>
+    <button id="admin-logout-btn" class="btn btn-xs btn-secondary"><i class="fa-solid fa-right-from-bracket"></i> Exit</button>
+  </div>
+
+  <!-- Navigation Header (Clean for public visitors) -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+        <a href="#certificates" class="nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-paper-plane"></i> Contact Me
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Mobile Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> <span id="hero-badge-text">Software Engineering Undergraduate</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient" id="hero-name">Tharushi Weerasekara</span>
+        </h1>
+        
+        <h2 class="hero-subtitle" id="hero-subtitle">
+          Software Engineering Undergraduate
+        </h2>
+        
+        <p class="hero-bio" id="hero-bio">
+          Software Engineering undergraduate with practical knowledge of software development, system analysis, web technologies, and database management. A quick learner seeking graduate opportunities in Software Engineering or IT.
+        </p>
+
+        <div class="hero-actions">
+          <button id="download-cv-btn" class="btn btn-primary btn-lg glow-effect">
+            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+          </button>
+          <a href="#contact" class="btn btn-outline btn-lg">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-socials" id="hero-socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="hero-linkedin-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="hero-github-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:tharushiweerasekara24@gmail.com" class="social-link" id="hero-email-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT ME (Profile Picture ONLY here) -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// GET TO KNOW ME</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-photo-container">
+              <div class="photo-glow"></div>
+              <img id="about-profile-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Tharushi Weerasekara" class="about-photo">
+            </div>
+            <div class="about-details">
+              <h3 id="about-heading">Software Engineering Undergraduate</h3>
+              <p class="about-text" id="about-text">
+                Software Engineering undergraduate with practical knowledge of software development, system analysis, web technologies, and database management. A quick learner with strong analytical, problem-solving, and teamwork skills, seeking a graduate opportunity in Software Engineering or IT while continuously expanding technical expertise.
+              </p>
+              <p class="about-subtext" id="about-subtext">
+                Experienced in full-stack web applications, desktop software development, AI API integration, database architecture, and IT operations through internship experience at Ruhunu Foods (Pvt) Ltd.
+              </p>
+
+              <div class="about-info-list" id="about-info-list">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WORK EXPERIENCE -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// PROFESSIONAL CAREER</span>
+          <h2 class="section-title">Work Experience</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline" id="experience-container">
+          <!-- Work Experience Cards Injected Dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EDUCATION -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// ACADEMIC BACKGROUND</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="education-grid" id="education-container">
+          <!-- Education Cards Injected Dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SKILLS -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// TECHNICAL & SOFT SKILLS</span>
+          <h2 class="section-title">Skills & Competencies</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-wrapper">
+          <div class="skill-category-block">
+            <h3 class="skill-category-title"><i class="fa-solid fa-code"></i> Technical Skills</h3>
+            <div class="skills-badges-grid" id="tech-skills-grid">
+              <!-- Technical Skill Badges Injected Dynamically -->
+            </div>
+          </div>
+
+          <div class="skill-category-block" style="margin-top: 3rem;">
+            <h3 class="skill-category-title"><i class="fa-solid fa-users-gear"></i> Soft Skills</h3>
+            <div class="skills-badges-grid" id="soft-skills-grid">
+              <!-- Soft Skill Badges Injected Dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PROJECTS -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// FEATURED WORK</span>
+          <h2 class="section-title">Projects</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-filter-tabs" id="projects-tabs">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="ai-ml">AI & Research</button>
+          <button class="filter-btn" data-filter="systems">Systems & Desktop</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Unlimited Project Cards Injected Dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CERTIFICATIONS & ACHIEVEMENTS -->
+    <section id="certificates" class="section certificates-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// QUALIFICATIONS & HONORS</span>
+          <h2 class="section-title">Certifications & Achievements</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="certs-grid" id="certs-grid">
+          <!-- Professional Certificate Cards Injected Dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// REACH OUT</span>
+          <h2 class="section-title">Contact Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-solo-wrapper">
+          <div class="contact-info-card glass-card contact-info-full">
+            <h3>Let's Connect!</h3>
+            <p>I am seeking graduate opportunities in Software Engineering or IT. Feel free to reach out through any of the channels below.</p>
+
+            <div class="contact-details-list" id="contact-details-list">
+              <!-- Populated dynamically -->
+            </div>
+
+            <div class="contact-social-links" id="contact-social-links">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year">2026</span> <span id="footer-name">Tharushi Weerasekara</span>. All rights reserved.</p>
+      
+      <div class="footer-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" id="footer-linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener" id="footer-github"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="mailto:tharushiweerasekara24@gmail.com" id="footer-email"><i class="fa-solid fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="modal-overlay">
+    <div class="modal-card glass-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Secret Admin Passcode Login Modal -->
+  <div id="admin-login-modal" class="modal-overlay">
+    <div class="modal-card glass-card" style="max-width:400px;text-align:center;">
+      <button class="modal-close" id="admin-login-close">&times;</button>
+      <div style="font-size:2.5rem;color:var(--color-primary);margin-bottom:1rem;">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h3 style="margin-bottom:0.5rem;font-size:1.4rem;">Secret Admin Portal</h3>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.5rem;">Enter security passcode to unlock live portfolio management drawer.</p>
+      
+      <form id="admin-login-form">
+        <div class="form-group" style="margin-bottom:1.25rem;">
+          <input type="password" id="admin-passcode-input" placeholder="Enter Admin Passcode" required style="text-align:center;letter-spacing:4px;font-size:1.1rem;">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-key"></i> Unlock Dashboard
+        </button>
+      </form>
+      <p style="font-size:0.75rem;color:var(--text-dim);margin-top:1rem;">Default passcode: <code>admin123</code></p>
+    </div>
+  </div>
+
+  <!-- Secret Live Admin Panel Drawer (Full CRUD for all sections) -->
+  <div id="editor-modal" class="modal-overlay">
+    <div class="modal-card glass-card admin-drawer">
+      <div class="admin-drawer-header">
+        <h2><i class="fa-solid fa-sliders"></i> Portfolio Content Manager</h2>
+        <button class="modal-close" id="editor-close">&times;</button>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="tab-profile"><i class="fa-solid fa-user"></i> Profile & CV</button>
+        <button class="admin-tab" data-tab="tab-about"><i class="fa-solid fa-address-card"></i> About</button>
+        <button class="admin-tab" data-tab="tab-projects"><i class="fa-solid fa-laptop-code"></i> Projects</button>
+        <button class="admin-tab" data-tab="tab-experience"><i class="fa-solid fa-briefcase"></i> Experience</button>
+        <button class="admin-tab" data-tab="tab-education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+        <button class="admin-tab" data-tab="tab-skills"><i class="fa-solid fa-code"></i> Skills</button>
+        <button class="admin-tab" data-tab="tab-certs"><i class="fa-solid fa-certificate"></i> Certifications</button>
+        <button class="admin-tab" data-tab="tab-settings"><i class="fa-solid fa-gear"></i> Settings</button>
+      </div>
+
+      <div class="admin-tab-content">
+        <!-- Tab 1: Profile & CV Upload -->
+        <div id="tab-profile" class="tab-pane active">
+          <form id="admin-profile-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="edit-name">
+              </div>
+              <div class="form-group">
+                <label>Badge Title</label>
+                <input type="text" id="edit-badge">
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="edit-email">
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" id="edit-phone">
+              </div>
+              <div class="form-group">
+                <label>Location</label>
+                <input type="text" id="edit-location">
+              </div>
+              <div class="form-group">
+                <label>GitHub URL</label>
+                <input type="text" id="edit-github" placeholder="https://github.com/username">
+              </div>
+              <div class="form-group">
+                <label>LinkedIn URL</label>
+                <input type="text" id="edit-linkedin" placeholder="https://linkedin.com/in/username">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top:1rem;">
+              <label>Profile Picture Photo Upload</label>
+              <input type="file" id="edit-photo-file" accept="image/*">
+            </div>
+
+            <div class="form-group" style="margin-top:1rem;">
+              <label>Upload CV File (PDF / Word Document)</label>
+              <input type="file" id="edit-cv-file" accept=".pdf,.doc,.docx">
+              <small style="color:var(--text-dim);font-size:0.75rem;">Selected CV will download automatically when visitors click "Download CV"</small>
+            </div>
+
+            <div class="form-group" style="margin-top:1rem;">
+              <label>Hero & Introduction Summary</label>
+              <textarea id="edit-bio" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:1.25rem;">
+              <i class="fa-solid fa-floppy-disk"></i> Save Profile & CV
+            </button>
+          </form>
+        </div>
+
+        <!-- Tab 2: About Me Section Manager -->
+        <div id="tab-about" class="tab-pane">
+          <form id="admin-about-form">
+            <div class="form-group">
+              <label>About Heading Title</label>
+              <input type="text" id="edit-about-heading">
+            </div>
+            <div class="form-group" style="margin-top:1rem;">
+              <label>Main About Paragraph</label>
+              <textarea id="edit-about-text" rows="4"></textarea>
+            </div>
+            <div class="form-group" style="margin-top:1rem;">
+              <label>Secondary / Experience Paragraph</label>
+              <textarea id="edit-about-subtext" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="margin-top:1.25rem;">
+              <i class="fa-solid fa-floppy-disk"></i> Save About Details
+            </button>
+          </form>
+        </div>
+
+        <!-- Tab 3: Projects Manager (With Screenshot Upload & Full Editing) -->
+        <div id="tab-projects" class="tab-pane">
+          <div class="admin-pane-header">
+            <h3>Manage Projects</h3>
+            <button id="add-project-btn" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Add New Project</button>
+          </div>
+          <div id="admin-projects-list" class="admin-items-list"></div>
+        </div>
+
+        <!-- Tab 4: Work Experience -->
+        <div id="tab-experience" class="tab-pane">
+          <div class="admin-pane-header">
+            <h3>Manage Work Experience</h3>
+            <button id="add-exp-btn" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Add Experience</button>
+          </div>
+          <div id="admin-exp-list" class="admin-items-list"></div>
+        </div>
+
+        <!-- Tab 5: Education -->
+        <div id="tab-education" class="tab-pane">
+          <div class="admin-pane-header">
+            <h3>Manage Education</h3>
+            <button id="add-edu-btn" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Add Education</button>
+          </div>
+          <div id="admin-edu-list" class="admin-items-list"></div>
+        </div>
+
+        <!-- Tab 6: Skills -->
+        <div id="tab-skills" class="tab-pane">
+          <div class="admin-pane-header">
+            <h3>Manage Skills</h3>
+            <button id="add-skill-btn" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Add Skill</button>
+          </div>
+          <h4 style="color:var(--color-primary);margin:0.75rem 0 0.5rem;"><i class="fa-solid fa-code"></i> Technical Skills</h4>
+          <div id="admin-tech-skills-list" class="admin-items-list"></div>
+          <h4 style="color:var(--color-primary);margin:1.25rem 0 0.5rem;"><i class="fa-solid fa-brain"></i> Soft Skills</h4>
+          <div id="admin-soft-skills-list" class="admin-items-list"></div>
+        </div>
+
+        <!-- Tab 7: Certifications -->
+        <div id="tab-certs" class="tab-pane">
+          <div class="admin-pane-header">
+            <h3>Manage Certifications</h3>
+            <button id="add-cert-btn" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Add Certification</button>
+          </div>
+          <div id="admin-certs-list" class="admin-items-list"></div>
+        </div>
+
+        <!-- Tab 8: Settings & Passcode -->
+        <div id="tab-settings" class="tab-pane">
+          <h3>Security & Reset Options</h3>
+          <form id="admin-passcode-form" style="margin-top:1rem;">
+            <div class="form-group">
+              <label>Change Security Passcode</label>
+              <input type="password" id="edit-passcode" placeholder="Enter new passcode">
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top:1rem;">
+              <i class="fa-solid fa-lock"></i> Update Passcode
+            </button>
+          </form>
+
+          <hr style="margin:1.5rem 0;border-color:var(--border-glass);">
+          
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <button id="export-json-btn" class="btn btn-secondary"><i class="fa-solid fa-download"></i> Export Backup (JSON)</button>
+            <button id="reset-default-btn" class="btn btn-secondary text-danger"><i class="fa-solid fa-rotate-left"></i> Reset to Default CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Edit / Create Modal -->
+  <div id="project-editor-modal" class="modal-overlay">
+    <div class="modal-card glass-card" style="max-width:550px;">
+      <button class="modal-close" id="project-editor-close">&times;</button>
+      <h3 id="project-editor-title" style="margin-bottom:1rem;">Add / Edit Project</h3>
+      <form id="project-edit-form">
+        <input type="hidden" id="project-edit-id">
+        <div class="form-group">
+          <label>Project Title</label>
+          <input type="text" id="project-edit-title" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Category</label>
+          <select id="project-edit-category">
+            <option value="fullstack">Full-Stack</option>
+            <option value="ai-ml">AI & Research</option>
+            <option value="systems">Systems & Desktop</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Upload Project Screenshot / Photo</label>
+          <input type="file" id="project-edit-img-file" accept="image/*">
+          <small style="color:var(--text-dim);font-size:0.75rem;">Upload custom image or leave blank to keep current photo.</small>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>GitHub Repository URL</label>
+          <input type="text" id="project-edit-github" placeholder="https://github.com/username/project">
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Short Summary</label>
+          <textarea id="project-edit-desc" rows="2" required></textarea>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Full Project Details</label>
+          <textarea id="project-edit-fulldetails" rows="4"></textarea>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Technologies / Tags (Comma Separated)</label>
+          <input type="text" id="project-edit-tags" placeholder="PHP, MySQL, JavaScript, Groq API">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">
+          <i class="fa-solid fa-floppy-disk"></i> Save Project
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Experience Add/Edit Modal -->
+  <div id="exp-editor-modal" class="modal-overlay">
+    <div class="modal-card glass-card" style="max-width:540px;">
+      <button class="modal-close" id="exp-editor-close">&times;</button>
+      <h3 id="exp-editor-title" style="margin-bottom:1rem;"><i class="fa-solid fa-briefcase"></i> Add / Edit Experience</h3>
+      <form id="exp-edit-form">
+        <input type="hidden" id="exp-edit-id">
+        <div class="form-group">
+          <label>Job Title / Role</label>
+          <input type="text" id="exp-edit-role" placeholder="e.g. IT Intern" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Company / Organization</label>
+          <input type="text" id="exp-edit-company" placeholder="e.g. Ruhunu Foods (Pvt) Ltd." required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Period</label>
+          <input type="text" id="exp-edit-period" placeholder="e.g. August 2025 - Present" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Duties / Responsibilities <small style="color:var(--text-dim);">(one per line)</small></label>
+          <textarea id="exp-edit-duties" rows="5" placeholder="Supported core systems&#10;Implemented ERP features&#10;Managed data entry"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">
+          <i class="fa-solid fa-floppy-disk"></i> Save Experience
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Education Add/Edit Modal -->
+  <div id="edu-editor-modal" class="modal-overlay">
+    <div class="modal-card glass-card" style="max-width:540px;">
+      <button class="modal-close" id="edu-editor-close">&times;</button>
+      <h3 id="edu-editor-title" style="margin-bottom:1rem;"><i class="fa-solid fa-graduation-cap"></i> Add / Edit Education</h3>
+      <form id="edu-edit-form">
+        <input type="hidden" id="edu-edit-id">
+        <div class="form-group">
+          <label>Qualification / Degree</label>
+          <input type="text" id="edu-edit-degree" placeholder="e.g. BSc (Hons) Computer Science" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Institution / University</label>
+          <input type="text" id="edu-edit-institution" placeholder="e.g. University Name" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Period</label>
+          <input type="text" id="edu-edit-period" placeholder="e.g. September 2023 - Present" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Grade / Status</label>
+          <input type="text" id="edu-edit-grade" placeholder="e.g. Distinction ⭐">
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Short Description</label>
+          <textarea id="edu-edit-description" rows="3" placeholder="Specializing in software engineering..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">
+          <i class="fa-solid fa-floppy-disk"></i> Save Education
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Skill Add/Edit Modal -->
+  <div id="skill-editor-modal" class="modal-overlay">
+    <div class="modal-card glass-card" style="max-width:480px;">
+      <button class="modal-close" id="skill-editor-close">&times;</button>
+      <h3 id="skill-editor-title" style="margin-bottom:1rem;"><i class="fa-solid fa-code"></i> Add / Edit Skill</h3>
+      <form id="skill-edit-form">
+        <input type="hidden" id="skill-edit-id">
+        <input type="hidden" id="skill-edit-type">
+        <div class="form-group">
+          <label>Skill Type</label>
+          <select id="skill-edit-category">
+            <option value="technical">Technical Skill</option>
+            <option value="soft">Soft Skill</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Skill Name</label>
+          <input type="text" id="skill-edit-name" placeholder="e.g. Python" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Tag / Description</label>
+          <input type="text" id="skill-edit-tag" placeholder="e.g. Programming Language">
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>FontAwesome Icon Class</label>
+          <input type="text" id="skill-edit-icon" placeholder="e.g. fa-brands fa-python">
+          <small style="color:var(--text-dim);font-size:0.75rem;">Find icons at <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" style="color:var(--color-primary);">fontawesome.com/icons</a></small>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">
+          <i class="fa-solid fa-floppy-disk"></i> Save Skill
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Certification Add/Edit Modal -->
+  <div id="cert-editor-modal" class="modal-overlay">
+    <div class="modal-card glass-card" style="max-width:540px;">
+      <button class="modal-close" id="cert-editor-close">&times;</button>
+      <h3 id="cert-editor-title" style="margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i> Add / Edit Certification</h3>
+      <form id="cert-edit-form">
+        <input type="hidden" id="cert-edit-id">
+        <div class="form-group">
+          <label>Certification Name / Title</label>
+          <input type="text" id="cert-edit-title" placeholder="e.g. AWS Certified Cloud Practitioner" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Issuing Organization</label>
+          <input type="text" id="cert-edit-issuer" placeholder="e.g. Amazon Web Services" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Date Issued</label>
+          <input type="text" id="cert-edit-date" placeholder="e.g. October 2025" required>
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>Credential ID / Status</label>
+          <input type="text" id="cert-edit-credid" placeholder="e.g. ABC123 or Verified">
+        </div>
+        <div class="form-group" style="margin-top:0.8rem;">
+          <label>FontAwesome Icon Class</label>
+          <input type="text" id="cert-edit-icon" placeholder="e.g. fa-solid fa-award">
+          <small style="color:var(--text-dim);font-size:0.75rem;">Default: fa-solid fa-award</small>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">
+          <i class="fa-solid fa-floppy-disk"></i> Save Certification
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
