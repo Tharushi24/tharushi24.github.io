@@ -11,14 +11,14 @@ const DEFAULT_PORTFOLIO_DATA = {
     name: "Tharushi Weerasekara",
     badge: "Software Engineering Undergraduate",
     heroSubtitle: "Software Engineering Undergraduate",
-    profilePhoto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-    cvLink: "#",
+    profilePhoto: "profile-photo.jpg",
+    cvLink: "Tharushi-CV.pdf",
     bio: "Software Engineering undergraduate with practical knowledge of software development, system analysis, web technologies, and database management. A quick learner with strong analytical, problem-solving, and teamwork skills, seeking a graduate opportunity in Software Engineering or IT.",
     email: "tharushiweerasekara24@gmail.com",
     phone: "+94 78 552 4073",
-    location: "Sri Lanka",
-    github: "https://github.com",
-    linkedin: "https://linkedin.com"
+    location: " Kandy, Sri Lanka",
+    github: "https://github.com/Tharushi24",
+    linkedin: "https://www.linkedin.com/in/tharushi-weerasekara2002"
   },
 
   about: {
@@ -77,17 +77,17 @@ const DEFAULT_PORTFOLIO_DATA = {
       id: "p1",
       title: "VimoraBot – AI-Based Psychological Counselling Web Platform",
       category: "fullstack",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+      image: "vimorabot-screenshot.jpg",
       description: "Full-stack AI-powered counselling web application for mental health support integrated with Groq API, interactive analytics, and responsive UI.",
       fullDetails: "Designed and developed a full-stack AI-powered counselling web application for mental health support. Integrated AI-driven conversational features via Groq API and developed a scalable, secure, and responsive system using PHP, MySQL, Chart.js, and AJAX. Applied software engineering methodologies from requirements analysis through implementation, testing, and evaluation.",
       tags: ["PHP", "MySQL", "JavaScript", "Groq API", "Chart.js", "AJAX", "XAMPP"],
-      github: "https://github.com"
+      github: "https://github.com/Tharushi24/Vimorabot-AI-Counselling-System"
     },
     {
       id: "p2",
       title: "Evaluating Impact of QuillBot's Paraphrasing Feature on Academic Writing",
       category: "ai-ml",
-      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+      image: "research.png",
       description: "Quantitative research evaluation analyzing the impact of AI-assisted paraphrasing on grammatical accuracy in academic writing.",
       fullDetails: "Conducted quantitative research to evaluate the impact of AI-assisted paraphrasing on academic writing. Analyzed survey data using SPSS to identify improvements in grammatical accuracy and proposed a conceptual framework for effective use of AI writing tools in higher education.",
       tags: ["SPSS", "Microsoft Excel", "QuillBot", "Google Forms", "Research Analysis"],
@@ -97,61 +97,61 @@ const DEFAULT_PORTFOLIO_DATA = {
       id: "p3",
       title: "GreenLife Organic Store Management System",
       category: "systems",
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80",
+      image: "greenlife.png",
       description: "Desktop-based retail store management application built with C# .NET Framework and SQL Server featuring Admin and Customer modules.",
       fullDetails: "Developed a desktop-based retail management system with Admin and Customer modules. Implemented product, order, inventory, and customer management with SQL Server integration. Built secure login, reporting dashboard, product search, and order tracking features.",
       tags: ["C#", ".NET Framework", "Windows Forms", "SQL Server", "Visual Studio"],
-      github: "https://github.com"
+      github: "https://github.com/Tharushi24/Greenlife-Organic-Store-Management-System"
     },
     {
       id: "p4",
       title: "IslandLink Sales Distribution Network (ISDN)",
       category: "fullstack",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
+      image: "isdn.png",
       description: "Centralized sales distribution management system with role-based access control, route tracking, and real-time inventory updates.",
       fullDetails: "Developed a centralized sales distribution management system with role-based access control. Implemented logistics, route management, delivery tracking, inventory monitoring, and reporting modules. Integrated SQL Server database with real-time inventory updates, dashboard reporting, and secure authentication.",
       tags: ["SQL Server", "HTML", "CSS", "JavaScript", "Bootstrap", "XAMPP"],
-      github: "https://github.com"
+      github: "https://github.com/Tharushi24/IslandLink-Sales-Distribution-Network"
     },
     {
       id: "p5",
       title: "The Silent Guardian – AI Agent Rescue Simulation",
       category: "systems",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+      image: "ai.png",
       description: "Interactive AI agent rescue simulation built using Finite State Machine (FSM) for intelligent state-based decision making.",
       fullDetails: "Developed an AI agent simulation using Finite State Machine (FSM) for intelligent state-based decision-making. Implemented multi-agent interactions, dynamic environments, and multiple user-driven outcomes. Designed an interactive rescue simulation using HTML, CSS, and JavaScript with real-time event handling.",
       tags: ["JavaScript", "HTML", "CSS", "Finite State Machine (FSM)", "AI Agents"],
-      github: "https://github.com"
+      github: "https://github.com/Tharushi24/Silent-Guardian-AI-Simulation"
     },
     {
       id: "p6",
       title: "Grifindo Lanka Toys – Leave Management System",
       category: "systems",
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+      image: "grifindo.png",
       description: "Desktop leave management system automating employee leave applications, entitlement tracking, admin approvals, and reporting.",
       fullDetails: "Developed a desktop-based application for Grifindo Lanka Toys to automate employee leave processes. The system allows employees to apply for annual, casual, or short leaves and track request statuses, while administrators can manage employee records, set leave entitlements, approve or reject applications, and generate analytical reports efficiently.",
       tags: ["C#", ".NET Framework", "Windows Forms", "Visual Studio", "SQL Server"],
-      github: "https://github.com"
+      github: "https://github.com/Tharushi24/Grifindo-Lanka-Toys-Leave-Management-System"
     },
     {
       id: "p7",
       title: "BlueScope Enterprise Network Architecture & Simulation",
       category: "systems",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+      image: "network.png",
       description: "Enterprise network design for Melbourne HQ & Darwin branch featuring VLSM subnetting, IPsec VPN, Wi-Fi, and IoT smart office integration.",
       fullDetails: "Designed and simulated a comprehensive enterprise network architecture for BlueScope's Melbourne head office and Darwin branch using Cisco Packet Tracer. Key implementations include VLSM departmental subnetting, secure site-to-site IPsec VPN connectivity between regional offices, enterprise Wi-Fi setup for conference rooms and customer service areas, and smart office IoT facility integration.",
       tags: ["Cisco Packet Tracer", "VLSM Subnetting", "IPsec VPN", "Wi-Fi WLAN", "IoT Integration"],
-      github: "https://github.com"
+      github: "https://github.com/Tharushi24/Blue-Scope-Network-Architecture"
     },
     {
       id: "p8",
       title: "Doctor Channelling System",
       category: "systems",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+      image: "drchaneling.png",
       description: "Java-based console application managing doctor appointments, patient records, scheduling, cancellations, and waiting list management via CLI.",
       fullDetails: "The Doctor Channelling System is a command-line application developed in Java to simulate the appointment management process in a healthcare environment. The system allows patients to register with their personal and medical information, search for available doctors, and book appointments based on available time slots.\n\nThe application supports doctor registration, including specialization, consultation fees, and available schedules. Patients can book, cancel, or request to reschedule appointments. When an appointment is cancelled, the system automatically allocates the available slot to the next patient in the waiting queue. Appointment records are stored during program execution to facilitate efficient management and future reference.\n\nThis project demonstrates object-oriented programming principles, data structures, user input validation, and console-based application development using Java.",
       tags: ["Java", "OOP", "CLI", "Console Application", "Data Structures", "Exception Handling"],
-      github: "#"
+      github: "https://github.com/Tharushi24/Doctor-Channelling-System"
     }
   ],
 
@@ -178,7 +178,7 @@ const DEFAULT_PORTFOLIO_DATA = {
       institution: "London Metropolitan University, United Kingdom",
       period: "September, 2025 - Present",
       grade: "Grade: Pending",
-      description: "Specializing in Advanced Software Engineering, Distributed Architectures, and Full-Stack Systems."
+      description: "Studying Software Engineering, Application Development, Advanced Software Engineering, Artificial Intelligence, Project Management and Practices, and Individual Project."
     },
     {
       id: "e2",
@@ -342,7 +342,7 @@ function renderPersonal() {
   document.getElementById("hero-bio").textContent = personal.bio;
   document.getElementById("footer-name").textContent = personal.name;
 
-  const photoUrl = personal.profilePhoto || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+  const photoUrl = personal.profilePhoto || "profile-photo.jpg";
   const aboutImg = document.getElementById("about-profile-img");
   if (aboutImg) aboutImg.src = photoUrl;
 
