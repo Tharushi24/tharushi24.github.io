@@ -177,7 +177,7 @@ const DEFAULT_PORTFOLIO_DATA = {
       degree: "BEng (Hons) Software Engineering (Top-Up)",
       institution: "London Metropolitan University, United Kingdom",
       period: "September, 2025 - Present",
-      grade: "Grade: Pending",
+      grade: "Award Class:	First Class Honours ⭐",
       description: "Studying Software Engineering, Application Development, Advanced Software Engineering, Artificial Intelligence, Project Management and Practices, and Individual Project."
     },
     {
